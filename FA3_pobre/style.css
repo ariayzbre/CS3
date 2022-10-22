@@ -1,0 +1,40 @@
+* {
+	margin:auto;
+}
+html {
+	background-image:url("images/blueimg.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+h1 {
+	text-align:center;
+	background-color:#007AFF;
+	font-family:Arial;
+	border:2px dotted blue;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:15px;
+	padding-right:15px;
+	width:250px;
+	margin-bottom:20px;
+}
+
+p {
+	text-align:justified;
+	font-style:italic;
+	background-color:hsl(207, 64%, 48%);
+	padding:20px;
+	border-top:3px dotted blue;
+	border-bottom:3px dashed blue;
+	border-left:3px solid blue;
+	border-right:3px double blue;
+	width:500px;
+}
+
+span {
+	font-weight:bold;
+	color:rgb(255, 255, 255);
+	margin-left:2px;
+	margin-right:5px;
+}
