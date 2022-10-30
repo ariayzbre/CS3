@@ -1,0 +1,35 @@
+		<div id="lists"> 
+			<h1 class="intro"></h1>
+			<h1>Introduction</h1>
+			<ul> 
+				<li class="list">Pisay Diary is a website that stores documented photos and blog excerpts </br>of each week. It serves 
+				as a literal "diary."</br></li>	
+				<li>All photos are given consent by all the people in it.</li>
+				<li>This is the diary (with no personal contents) of Lithium's Aria Yzobelle.</li>
+			</ul>
+			<h2>Table of Contents</h2>
+			<ol>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 1</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 2</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 3</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 4</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 5</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 6</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 7</li>
+				<li><a href="https://ariayzbre.github.io/CS3/LithiumPobre1stQtrProj_v1/htdocs/main.html">Week 8</li>
+			</ol>
+		</div>
+		
+	ul li a {
+	text-decoration:none;
+	color:black;
+	padding:5px 20px;
+	border:1px solid black;
+	transition:0.5s linear;
+	margin-right:20px;
+}
+
+ul li a:hover {
+	background-color:#e2ceb8;
+	color:black;
+}
