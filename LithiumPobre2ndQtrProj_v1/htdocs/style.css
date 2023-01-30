@@ -1,0 +1,61 @@
+* {
+	text-align:justified;
+	font-family:"Verdana";
+	background-color:#beefed;
+	list-style-type:none;
+}
+
+nav {
+	list-style-type:none;
+	float:left;
+	margin-top:25px;
+}
+
+nav ul li {
+	display:inline-block;
+}
+
+nav ul li a {
+	text-decoration:none;
+	color:black;
+	background-color:#e2ceb8;
+	padding:5px 20px;
+	border:1px solid black;
+	transition:0.5s linear;
+	margin-right:20px;
+	font-size:20px;
+}
+
+nav ul li a:hover {
+	background-color:#beefed;
+	color:black;
+}
+
+header {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background: url('imgs/sprite.png') no-repeat -105px 0;
+	width: 100px;
+	height: 100px;
+}
+
+footer {
+	position:fixed;
+	font-size:10px;
+	left:0;
+	bottom:0;
+	background-color:#e2ceb8;
+	width:100%;
+}
+
+footer ul li{
+	background-color:#e2ceb8;
+	width:100%;
+}
+
+footer ul li a {
+		text-decoration:none;
+		color:black;
+}
