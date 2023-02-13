@@ -1,0 +1,19 @@
+<!DOCType html>
+<html>
+	<body>
+		<h1> Lez toss a coin! </h1>
+		<button onclick ="f1()" id = "toss" >Heads? Or tails?</button>
+		<script>
+		var num = (Math.random() * 2).toFixed(5);
+			
+			function f1() {
+				if (num >= 1) {
+					document.write("HEADS");
+				}
+				else {
+					document.write("TAILS");
+				}
+			}
+		</script>
+	</body>
+</html>
