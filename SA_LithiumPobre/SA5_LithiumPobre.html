@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My Online Shop</title>
+    <meta charset="UTF-8">
+	<meta name="description" content="CS3 Summative Assessment">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Aria Yzobelle E. Pobre">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+      span {color: blue; text-decoration:underline}
+      button {width: 100px; padding: 5px; background: pink;}
+	</style>
+
+	</head>
+<body>
+	<h1> Welcome to Going Seventeen Merch Shop </h1>
+	<h2> Please select from the following items </h2>
+	<!--- Items in Going Seventeen --->
+	<ol>
+		<li> EXCLUSIVE Lee Dokyeom PC: 5000.00 </li>
+		<li> An Ode Sealed Album w/free PC: 3500.00 </li>
+		<li> Caratbong Version 3: 1.00 </li>
+	</ol>
+	<!-- the following will be used to display purchase information -->
+    <p> Item selected : <span id="item"> </span> </p>
+	<p> Qty bought : <span id="qty"> </span> </p>
+	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Current Total Bill: <span id="tbill"> </span> </p>
+	<button onclick="purchase()"> Buy an Item </button>
+	<button onclick="clearAll()"> Clear </button>
+    
+    <script>
+	/*The list of items will be the basis of the switch statements, but the user input should be converted to an integer in order for the
+	cases to work. As for the quantity, bill, and total bill, there should be variables assigned to each of them to properly conduct basic
+	mathematics and a few coding elements*/
+	
+        var total = 0; // where the total will be stored because 0 will be replaced with a new integer 
+
+        function purchase(){
+			let numItem = parseInt(prompt("Nung item ibakal mo dong?: ", "1")); // parseInt converts strings to integers 
+			
+            if(numItem == 1 || numItem == 2 || numItem == 3){ // when the converted string is equal to the case numbers added later on, this will be excecuted 
+                var quantityItem = prompt("Enter quantity: ", "5000"); // this prompts the user to enter a number for the variable assigned
+				}
+					
+                switch(numItem){ // switch statement 
+                    case 1:
+                    if(numItem == 1){ // the value given by the user (numItem) will be incorporated in this statement
+                        total += quantityItem*5000.00; // the quantity variable is multiplied by the price of item 1 
+                        let bill = 5000*quantityItem;
+                        document.getElementById("item").innerHTML = "EXCLUSIVE Lee Dokyeom PC"; // will be stored in Item selected: 
+                        document.getElementById("qty").innerHTML = quantityItem; // will be stored in Qty bought: 
+                        document.getElementById("bill").innerHTML = "Php " + bill; // will be stored in Amount to pay for the item:
+                        document.getElementById("tbill").innerHTML = "Php " + total; // will be stored in Current Total Bill: 
+                        break;
+                    }
+
+                    case 2: // the rest of the cases in the switch statement will have the same comments, the only differences are the prices and string values
+                    if(numItem == 2){
+                        total+= quantityItem*3500.00;
+                        let bill = 3500.00*quantityItem;
+                        document.getElementById("item").innerHTML = "An Ode Sealed Album w/ free PC";
+                        document.getElementById("qty").innerHTML = quantityItem;
+                        document.getElementById("bill").innerHTML = "Php " + bill;
+                        document.getElementById("tbill").innerHTML = "Php " + total;
+                        break;
+                    }  
+
+                    case 3:
+                    if(numItem == 3){
+                        total+= quantityItem*1.00;
+                        let bill = 1.00*quantityItem;
+                        document.getElementById("item").innerHTML = "Caratbong Version 3";
+                        document.getElementById("qty").innerHTML = quantityItem;
+                        document.getElementById("bill").innerHTML = "Php " + bill;
+                        document.getElementById("tbill").innerHTML = "Php " + total;
+                        
+                        break;
+                    }  
+                }
+        
+            }
+
+        function clearAll(){ 
+            window.location.reload(); // all information like the quantity and items selected will be cleared out, including the output of the switch statements 
+        }
+    
+        
+    </script>
+</body>
+
+</html>
+
+</html>
+

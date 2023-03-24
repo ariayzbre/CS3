@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="CS3 Summative Assessment">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Aria Yzobelle E. Pobre">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload = "getOTP()"> 
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="" onclick = "getOTP()"> New OTP </a></h2>
+    <button onclick = "inspect()"> Enter the OTP as shown above </button>
+    
+    <script>
+	/*since functions were declared beforehand, based on the instructions given for this SA, a function should generate random numbers.
+	Though it's possible through loops, the simpler version is to generate random numbers through Math.random(). The other function 
+	should let the user input their values through a prompt, and the value given by the user should be the basis of an if-else function
+	to determine the correct and/wrong OTP*/
+	
+		var randomOTP;
+
+		function getOTP() {
+			randomOTP = Math.floor(Math.random()*899999 + 100000); // to generate 6 random numbers
+			document.getElementById("otp").innerHTML = randomOTP; // to display the declared variable in the <span>
+		}
+		function inspect() { 
+			otprompt = prompt("Please input your ONE TIME PASSOWRD: ");
+			
+			if (otprompt == randomOTP) { // if the prompt given by the user is equal to the random numbers given by the variable "random"
+				window.open("https://www.cdc.gov/hand-foot-mouth/about/prevention.html"); // the user will be directed in this website after the condition is correct 
+			}
+			else { // this displays if the if statement is incorrect :((
+				alert("Tarunga ang OTP mo dong");
+				getOTP();
+			}
+		}
+    </script>
+</body>
+</html>
