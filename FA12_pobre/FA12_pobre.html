@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>FA12_pobre</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="CS3 Formative Assessment 12">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Aria Yzobelle E. Pobre">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<style>
+	
+		span {
+			display: inline-block;
+			padding: 10px;
+			width: 55px;
+			border: 1px double black;
+		}
+		
+		p {
+			display: inline-block;
+		}
+		
+		#btn {
+			position: justify;
+			display: inline-block;
+		}
+		
+		#finalTable {
+			top: 150px;
+			right: 550px;
+			margin: 5px;
+			padding: 2px;
+			border: 1px solid black;
+			display: inline-block;
+		}
+		
+	</style>
+	
+	<body>
+		<div>
+			<form>
+				<h1>Multiplication Table</h1>
+				<label for = "name">Enter a number between 2 and 10</label><br/>
+				<input type = "number" id = "rowValue" placeholder = "Rows" min = "1"> 
+				<p>by</p>
+				<input type = "number" id = "columnValue" placeholder = "Columns" min = "1">
+			</form>
+	
+			<br/>
+			<button onclick="multTable()" id = "btn">Submit</button> 
+
+			<div id="finalTable">
+				<br/><br/>
+			</div>
+		</div>
+		
+		<script>
+			function multTable(){
+			
+				const rowValue = parseInt(document.getElementById("rowValue").value);
+				const columnValue = parseInt(document.getElementById("columnValue").value);
+				
+				if(rowValue < 2 || rowValue > 10 || columnValue < 2 || columnValue > 10){
+					alert("Input error. Please enter a number between 2 and 10");
+					return;
+				} 
+				
+				let multRow = 1;
+				var output = "";
+				
+				while(multRow <= rowValue){
+					let multColumn = 1;
+					while(multColumn <= columnValue){
+						output += "<span>" + multColumn*multRow + "</span>"; 
+						multColumn++;
+					}
+					output += "<br/>";
+					multRow++;
+				}
+				
+				document.getElementById("finalTable").innerHTML = output;
+				document.getElementById("finalTable").innerHTML = inline-block;
+			}
+		</script>
+	</body>
+</html>
