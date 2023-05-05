@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Q4_AA1_pobre</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="CS3 Formative Assessment 12">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Aria Yzobelle E. Pobre">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+    <body>
+		<script>
+            var mRNA = prompt("Hi dzai enter mo na ang mRNA sequence nga gusto mo: ").toUpperCase();
+            var start = mRNA.indexOf("AUG");
+			var codonArray = [];
+            var amcidArray = [];
+			var codon = "";
+			var amino = "";
+
+            if (start == -1) {
+            document.write ("Waay man gagana ang starting codon mo dzai :((") 
+			} 
+			    else {
+                var frameRead = mRNA.slice(start);
+                var i = 0;
+
+            while (i < frameRead.length - 3) {
+                codon = frameRead.slice(i, i + 3);
+                codonArray.push(codon);
+                i += 3 
+			}
+
+            for (var i = 0; i < codonArray.length; i++) {
+            
+            switch (codonArray[i]) {
+                case "UUU":
+                case "UUC":
+                amino = "Phe";
+                break;
+				
+                case "UUA":
+                case "UUG":
+                case "CUU":
+                case "CUC":
+                case "CUA":
+                case "CUG":
+                amino = "Leu";
+                break;
+				
+                case "AUU":
+                case "AUC":
+                case "AUA":
+                amino = "Ile";
+                break;
+				
+                case "AUG":
+                amino = "Met";
+                break;
+				
+                case "GUU":
+                case "GUC":
+                case "GUA":
+                case "GUG":
+                amino = "Val";
+                break;
+				
+                case "UCU":
+                case "UCC":
+                case "UCA":
+                case "UCG":
+				case "AGU":
+				case "AGC":
+                amino = "Ser";
+                break;
+				
+                case "CCU":
+                case "CCC":
+                case "CCA":
+                case "CCG":
+                amino = "Pro";
+                break;
+				
+                case "ACU":
+                case "ACC":
+                case "ACA":
+                case "ACG":
+                amino = "Thr";
+                break;
+				
+                case "GCU":
+                case "GCC":
+                case "GCA":
+                case "GCG":
+                amino = "Ala";
+                break;
+				
+                case "UAU":
+                case "UAC":
+                amino = "Tyr";
+                break;
+				
+				case "CAU":
+				case "CAC":
+				amino = "His";
+				break;
+				
+				case "CAA":
+				case "CAG":
+				amino = "Gln";
+				break;
+				
+				case "AAU":
+				case "AAC":
+				amino = "Asn";
+				break;
+				
+				case "AAA":
+				case "AAG":
+				amino = "Lys";
+				break;
+				
+				case "GAU":
+				case "GAC":
+				amino = "Asp";
+				break;	
+				
+				case "GAA":
+				case "GAG":
+				amino = "Glu";
+				break;
+				
+                case "UGU":
+                case "UGC":
+                amino = "Cys";
+                break;
+				
+                case "UGG":
+                amino = "Trp";
+                break;
+				
+	            case "CGU":
+                case "CGC":
+                case "CGA":
+				case "CGG":
+				case "AGA":
+				case "AGG":
+				amino = "Arg";
+                break;
+				
+				case "GGU":
+				case "GGC":
+				case "GGA":
+				case "GGG":
+                amino = "Gly";
+                break;	
+				
+                case "UAA":
+                case "UAG":
+                case "UGA":
+                amino = "STOP";
+                break;
+				
+                default:
+                amino = "X";
+                break;
+				}
+                amcidArray.push(amino);
+			}
+            document.write('[' + codonArray.map(codon => `"${codon}"`).join(',') + ']');
+            document.write('<br>' + '<br>' + amcidArray.map((amino, index) => `${codonArray[index]} --> ${amino}`).join('<br>'));
+            
+		} 
+        </script>
+    </body>
+</html>
